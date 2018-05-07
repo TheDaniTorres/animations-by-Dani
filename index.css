@@ -1,0 +1,104 @@
+
+* { box-sizing: border-box;}
+body {
+  background: url("fondofinal.png");
+  width: 100% auto;
+  height: 100% auto;
+}
+.ground {
+  animation: move 10s steps(1000) infinite forwards;
+}
+
+.enemy {
+  animation: walk 10s steps(1000) infinite forwards, jump 3s steps(1000) infinite forwards;
+}
+
+.small-cloud {
+  animation: slide-left 10s steps(1000) infinite forwards, down-up 10s steps(1000) infinite forwards;
+}
+
+.enemigo-cloud {
+  animation: slide-left 5s steps(1000) infinite forwards;
+}
+.other-cloud {
+  animation: slide-left 7s steps(1000) infinite forwards, down-up 5s steps(1000) infinite forwards;
+}
+
+.big-cloud {
+  animation: slide-left 5s steps(1000) infinite forwards, down-up 10s steps(1000) infinite forwards;
+}
+
+
+
+@keyframes move {
+  100% { margin-right: 110vw; }
+}
+
+@keyframes walk {
+  100% { margin-left: 1024px;  transform: scale(2);  }
+}
+
+@keyframes jump {
+  50% { bottom: 226px; }
+  100% { bottom: 113px; }
+}
+
+@keyframes slide-left {
+  100% { margin-right: 2048px; }
+}
+
+@keyframes down-up {
+  50% { margin-top: 200px;}
+  100% { margin-top: 0px; }
+}
+
+.ground {
+    background-image: url("tierra.png");
+  width: 100%;
+  height: 42px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 0;
+  left: 0px;
+  bottom: 0px;
+}
+
+.enemy {
+  background-image: url("images/super-mario/enemy.png");
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  bottom: 113px;
+  margin-left: -175px;
+}
+
+.small-cloud {
+  background-image: url("small-cloud.png");
+  width: 118px;
+  height: 80px;
+  top: 0px;
+  right: 0px;
+  position: absolute;
+  margin-right: 0;
+  background-repeat: no-repeat;
+  transform: scale(1);
+}
+
+.enemigo-cloud {
+  background-image: url("enemigo-cloud.png");
+  width: 136px;
+  height: 169px;
+  top: 0px;
+  right: 0px;
+  position: absolute;
+  margin-right: 0;
+  background-repeat: no-repeat;
+  transform: scale(1);
+}
+
+
+.other-cloud {
+  top: 100px;
+  right: 100px;
+}
